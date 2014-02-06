@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<!-- By default, only the Clean and Build commands use this build script. -->
+<!-- Commands such as Run, Debug, and Test only use this build script if -->
+<!-- the Compile on Save feature is turned off for the project. -->
+<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
+<!-- in the project's Project Properties dialog box.-->
+<project name="BluePot" default="default" basedir=".">
+    <target name="-init-macrodef-java">
+    <macrodef name="java" uri="http://www.netbeans.org/ns/j2se-project/1">
+        <attribute default="${main.class}" name="classname"/>
+        <attribute default="${run.classpath}" name="classpath"/>
+        <element name="customize" optional="true"/>
+        <sequential>
+            <exec executable="gksudo" failonerror="true">
+                <arg value="--"/>
+                <arg value="java"/>
+                <arg value="-classpath"/>
+                <arg path="@{classpath}"/>
+                <arg line="${run.jvmargs}"/>
+                <arg value="@{classname}"/>
+            </exec>
+        </sequential>
+    </macrodef>
+</target>
+
+    <import file="nbproject/build-impl.xml"/>
+ 
+</project>
