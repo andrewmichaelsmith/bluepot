@@ -12,3 +12,5 @@ The system also allows monitoring of attacks via a graphical user interface that
 The system is also highly configurable through said interface.
 
 The project aims to be a well-rounded and fully featured piece of software.
+
+![What bluepot looks like](https://raw2.github.com/andrewmichaelsmith/bluepot/master/bin/screenshot.png "What bluepot looks like")
