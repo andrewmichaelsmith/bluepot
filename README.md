@@ -14,7 +14,7 @@ run bluepot
 =======
     wget https://github.com/andrewmichaelsmith/bluepot/raw/master/bin/bluepot-0.1.tar.gz
     tar xfz bluepot-0.1.tar.gz
-    sudo java -jar Bluepot-0.1.jar &
+    sudo java -jar bluepot/Bluepot-0.1.jar &
 
 
 ![What bluepot looks like](https://raw2.github.com/andrewmichaelsmith/bluepot/master/bin/screenshot.png "What bluepot looks like")
