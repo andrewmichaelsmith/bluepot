@@ -17,4 +17,4 @@ run bluepot
     sudo java -jar bluepot/Bluepot-0.1.jar &
 
 
-![What bluepot looks like](https://raw2.github.com/andrewmichaelsmith/bluepot/master/bin/screenshot.png "What bluepot looks like")
+![What bluepot looks like](https://raw.github.com/andrewmichaelsmith/bluepot/master/bin/screenshot.png "What bluepot looks like")
