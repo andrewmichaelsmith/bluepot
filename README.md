@@ -10,8 +10,19 @@ Bluepot was a third year university project attempting to implement a fully func
 The system also allows monitoring of attacks via a graphical user interface that provides graphs, lists, a dashboard and further detailed analysis from log files.
 
 
+dependencies 
+============
+
+You need linux, you need root and you need to have at least 1 bluetooh receiver (if you have many it will work wiht those, too).
+
+You must install:
+
+* libbluetooth-dev on Ubuntu
+* bluez-libs-devel on Fedora
+* bluez-devel on openSUSE
+
 run bluepot
-=======
+===========
     wget https://github.com/andrewmichaelsmith/bluepot/raw/master/bin/bluepot-0.1.tar.gz
     tar xfz bluepot-0.1.tar.gz
     sudo java -jar bluepot/BluePot-0.1.jar
