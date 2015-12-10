@@ -1,3 +1,6 @@
+[![bountysource](https://api.bountysource.com/badge/issue?issue_id=12486899 "bountysource")](https://www.bountysource.com/issues/12486899-bluepot-interface-doesn-t-work-in-debian-jessie)
+
+
 bluepot
 =======
 
