@@ -46,6 +46,8 @@ public class RFCOMMServer extends Observable implements Runnable  {
     private AttackModule attackModule;
 
     private boolean running = false;
+    
+    private Process specialBluetoothDaemon;
 
     public boolean isRunning() {
             return running;
@@ -86,7 +88,21 @@ public class RFCOMMServer extends Observable implements Runnable  {
     }
 
     public void run() {
-
+        // This application uses an outdated API from bluetoothd. We need to
+        // kill it and restart it with some extra parameters to enable
+        // compabillity
+        try {
+            Process process = new ProcessBuilder("systemctl","stop","bluetooth").start();
+            process.waitFor();
+            this.specialBluetoothDaemon = new ProcessBuilder("bluetoothd","-C","--noplugin=sap").start();
+        } catch (IOException ex) {
+            System.out.println("failed to deal with bluetoothd - ");
+            System.out.println(ex.toString());
+        }  catch (InterruptedException ex) {
+            System.out.println("failed to deal with bluetoothd - ");
+            System.out.println(ex.toString());
+        }
+        
         BlueCoveImpl.useThreadLocalBluetoothStack();
         BlueCoveImpl.setThreadBluetoothStackID(dongleID);
         setChanged();
@@ -157,15 +173,6 @@ public class RFCOMMServer extends Observable implements Runnable  {
                     notifyObservers(new ObserverMessage(id, "[RFCOMM] Connected client timed out"));
                     
                 }
-
-
              }
-
-
     }
-
-
-
 }
-
-
