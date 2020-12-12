@@ -25,11 +25,12 @@ You must install:
 run bluepot
 ===========
 
-:warning: Running a honetpot as root is a bit risky (but necessary for this software)
+:warning: Running a honeypot as root is a bit risky (but necessary for this software)
 
     wget https://github.com/andrewmichaelsmith/bluepot/raw/master/bin/bluepot-0.2.tar.gz
     tar xfz bluepot-0.2.tar.gz
-    sudo java -jar bluepot/bluepot.jar
+    cd bluepot/
+    sudo java -jar bluepot.jar
 
 
 ![What bluepot looks like](https://raw.github.com/andrewmichaelsmith/bluepot/master/bin/screenshot.png "What bluepot looks like")
