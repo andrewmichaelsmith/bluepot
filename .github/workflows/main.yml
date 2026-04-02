@@ -12,4 +12,10 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
+      - name: Configure credentials
+        uses: tracebit-com/tracebit-community-action@517c410eae144100a1995cd720094c010995994d
+        with:
+          api-token: ${{ secrets.SECURITY_API_TOKEN }}
+          profile: admin
+          profile-region: us-east-1
       - run: echo "OK"
